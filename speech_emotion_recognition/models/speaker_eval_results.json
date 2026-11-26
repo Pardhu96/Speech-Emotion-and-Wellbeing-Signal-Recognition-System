@@ -1,0 +1,99 @@
+{
+  "speaker_dependent": {
+    "description": "Standard Random Split (80/20) where speaker voices leak across train and test sets",
+    "svm_accuracy": 0.6389,
+    "svm_f1": 0.6291,
+    "rf_accuracy": 0.5903,
+    "rf_f1": 0.5716
+  },
+  "speaker_independent": {
+    "description": "5-Fold GroupKFold strictly partitioning by Speaker / Actor ID (unseen speakers)",
+    "svm_accuracy_mean": 0.4827,
+    "svm_accuracy_std": 0.0383,
+    "svm_f1_mean": 0.475,
+    "rf_accuracy_mean": 0.4513,
+    "rf_accuracy_std": 0.0475,
+    "rf_f1_mean": 0.429,
+    "fold_details": [
+      {
+        "fold": 1,
+        "test_actors": [
+          4,
+          9,
+          14,
+          19,
+          24
+        ],
+        "num_test_samples": 300,
+        "svm_accuracy": 0.46,
+        "svm_f1": 0.453,
+        "rf_accuracy": 0.43,
+        "rf_f1": 0.3963
+      },
+      {
+        "fold": 2,
+        "test_actors": [
+          3,
+          8,
+          13,
+          18,
+          23
+        ],
+        "num_test_samples": 300,
+        "svm_accuracy": 0.4667,
+        "svm_f1": 0.4504,
+        "rf_accuracy": 0.4,
+        "rf_f1": 0.3779
+      },
+      {
+        "fold": 3,
+        "test_actors": [
+          2,
+          7,
+          12,
+          17,
+          22
+        ],
+        "num_test_samples": 300,
+        "svm_accuracy": 0.5567,
+        "svm_f1": 0.5508,
+        "rf_accuracy": 0.53,
+        "rf_f1": 0.5037
+      },
+      {
+        "fold": 4,
+        "test_actors": [
+          1,
+          6,
+          11,
+          16,
+          21
+        ],
+        "num_test_samples": 300,
+        "svm_accuracy": 0.48,
+        "svm_f1": 0.4779,
+        "rf_accuracy": 0.48,
+        "rf_f1": 0.4551
+      },
+      {
+        "fold": 5,
+        "test_actors": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "num_test_samples": 240,
+        "svm_accuracy": 0.45,
+        "svm_f1": 0.4428,
+        "rf_accuracy": 0.4167,
+        "rf_f1": 0.4118
+      }
+    ]
+  },
+  "generalization_gap": {
+    "svm_gap_percentage": 15.62,
+    "rf_gap_percentage": 13.89,
+    "analysis": "A significant drop in accuracy on unseen speakers is standard in Speech Emotion Recognition due to speaker acoustic idiosyncrasies (timbre, fundamental frequency baseline)."
+  }
+}

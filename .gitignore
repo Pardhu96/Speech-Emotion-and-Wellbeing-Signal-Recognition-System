@@ -1,2 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python tooling and test output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Downloaded dataset and extracted audio
 speech_emotion_recognition/data/Audio_Speech_Actors_01-24.zip
-speech_emotion_recognition/data/Audio_Speech_Actors_01-24.zip
+speech_emotion_recognition/data/audio/
+speech_emotion_recognition/data/spectrograms.npz
+speech_emotion_recognition/data/features_tabular.npz
+speech_emotion_recognition/data/dataset_manifest.csv
+
+# Generated training artifacts
+speech_emotion_recognition/models/*.pt
+speech_emotion_recognition/models/*.pth
+speech_emotion_recognition/models/*.joblib
+speech_emotion_recognition/models/*.pkl
+speech_emotion_recognition/models/*.pickle
+speech_emotion_recognition/models/metrics.json
+speech_emotion_recognition/models/speaker_eval_results.json
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
